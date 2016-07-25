@@ -1,8 +1,8 @@
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.support.PageFactory;
-import pages.CellPage;
 import pages.HomePage;
+import pages.StreamPage;
 import utils.Browser;
 import utils.tools.Log;
 
@@ -20,12 +20,12 @@ public class AddPostTest extends AbstractAutoLoginTest {
 
         Log.info(String.format("Selecting cell with name %s", cellName));
         homePage.selectCell(cellName);
-        CellPage cellPage = new CellPage();
+        StreamPage streamPage = new StreamPage();
 
         Log.info(String.format("Adding youtube link %s", linkToAdd));
-        cellPage.addLinkToPost(linkToAdd);
+        streamPage.addLinkToPost(linkToAdd);
 
         Log.info(String.format("Verifying link %s was added to the Stream", linkToAdd));
-        Assert.assertTrue("Verifying link was posted", cellPage.isLinkAdded(linkToAdd));
+        Assert.assertTrue("Verifying link was posted", streamPage.isLinkAdded(linkToAdd));
     }
 }

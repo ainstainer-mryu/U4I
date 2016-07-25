@@ -43,7 +43,7 @@ public class HomePage extends BasePage {
         UiHelper.waitFor(BY_INVITES);
         UiHelper.click(BY_BT_DONE);
 
-        UiHelper.waitFor(CellPage.BY_POST_FIELD);
+        UiHelper.waitFor(StreamPage.BY_POST_FIELD);
         return PageFactory.initElements(Browser.getDriver(), CellPage.class);
     }
 
@@ -54,6 +54,6 @@ public class HomePage extends BasePage {
     public void selectCell(String cellName) {
         By byExistedCellName = new By.ByXPath(String.format("//div[text()='%s']", cellName));
         UiHelper.click(byExistedCellName);
-        UiHelper.waitFor(CellPage.BY_POST_FIELD);
+        UiHelper.waitFor(StreamPage.BY_POST_FIELD);
     }
 }
