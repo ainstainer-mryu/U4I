@@ -1,0 +1,27 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+
+ext{
+    seleniumVersion = "2.53.1"
+    junitVersion = "4.12"
+    log4jApiVersion = "2.6.1"
+    log4jCoreVersion = "2.6.1"
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    compile "org.seleniumhq.selenium:selenium-java:${seleniumVersion}"
+    compile group: 'org.slf4j', name: 'slf4j-simple', version: '1.6.1'
+    compile "org.springframework:spring-core:3.0.5.RELEASE"
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = "2.13"
+}
+
+
+

@@ -1,0 +1,9 @@
+17:09:38.789 DEBUG LoginTest - Logging as Admin
+17:09:39.244 DEBUG LoginTest - Verifying user is logged in
+17:18:31.858 DEBUG AbstractAutoLoginTest - Login to the system
+17:46:08.988 DEBUG AbstractAutoLoginTest - Login to the system
+17:46:09.469 DEBUG DeleteCell - Creating cell autoTestCell2
+17:46:17.480 DEBUG DeleteCell - Deleting cell autoTestCell2
+17:46:25.007 DEBUG DeleteCell - Verifying cell autoTestCell2 is deleted
+17:51:01.103 DEBUG LoginTest - Logging as Admin
+17:51:01.539 DEBUG LoginTest - Verifying user is logged in
