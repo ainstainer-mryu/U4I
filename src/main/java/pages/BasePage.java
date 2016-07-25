@@ -46,4 +46,8 @@ public class BasePage {
     public boolean isLoggedUserImageShown(){
         return UiHelper.isPresent(By.id("user-account-image"));
     }
+
+    public boolean isUserLoggedIn(String username){
+        return UiHelper.isPresent(By.xpath(String.format("//strong[text()='%s']", username)));
+    }
 }

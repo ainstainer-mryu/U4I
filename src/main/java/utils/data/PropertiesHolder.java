@@ -28,12 +28,17 @@ public class PropertiesHolder {
     }
 
 
-    public static String getUserName(){
-        return PropertiesHolder.getProperties().getProperty("username");
+    public static String getAdminLoginName(){
+        return PropertiesHolder.getProperties().getProperty("user.admin.login_name");
     }
 
-    public static String getPassword(){
-        return PropertiesHolder.getProperties().getProperty("password");
+    public static String getAdminPassword(){
+
+        return PropertiesHolder.getProperties().getProperty("user.admin.password");
+    }
+
+    public static String getAdminUserName(){
+        return PropertiesHolder.getProperties().getProperty("user.admin.username");
     }
 
 }

@@ -26,7 +26,7 @@ public class Navigation {
         logger.debug("Logging in as admin.");
         LoginPage loginPage = PageFactory.initElements(Browser.getDriver(), LoginPage.class);
 
-        return loginPage.loginAs(PropertiesHolder.getUserName(), PropertiesHolder.getPassword());
+        return loginPage.loginAs(PropertiesHolder.getAdminLoginName(), PropertiesHolder.getAdminPassword());
     }
 
     /**

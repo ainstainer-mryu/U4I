@@ -4,7 +4,6 @@ import org.openqa.selenium.By;
 import utils.data.PropertiesHolder;
 import utils.helpers.UiHelper;
 
-import static pages.StreamPage.BY_POST_FIELD;
 import static pages.StreamPage.BY_WALL_STREAM;
 
 /**
@@ -37,14 +36,14 @@ public class CellPage extends HomePage {
         UiHelper.waitFor(BY_TAB_DELETE);
         UiHelper.click(BY_TAB_DELETE);
         UiHelper.waitFor(BY_DELETE_PASSWORD);
-        UiHelper.sendKeys(BY_DELETE_PASSWORD, PropertiesHolder.getPassword());
+        UiHelper.sendKeys(BY_DELETE_PASSWORD, PropertiesHolder.getAdminPassword());
         UiHelper.click(BY_BTN_DELETE);
         UiHelper.waitFor(BY_WALL_STREAM);
     }
 
     public void inviteUser(String username){
         //TODO add case if user does not exist or already a member
-        By userToInvite = new By.ByXPath(String.format("//span[text()='%s']]", username));
+        By userToInvite = new By.ByXPath(String.format("//span[text()='%s']", username));
         UiHelper.click(BY_BTN_INVITE);
         UiHelper.waitFor(BY_ADD_USER);
         UiHelper.sendKeys(BY_ADD_USER, username);

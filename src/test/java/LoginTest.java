@@ -1,7 +1,7 @@
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.support.PageFactory;
-import pages.HomePage;
+import pages.BasePage;
 import pages.LoginPage;
 import utils.Browser;
 import utils.data.PropertiesHolder;
@@ -17,10 +17,9 @@ public class LoginTest extends AbstractTest{
         LoginPage loginPage = PageFactory.initElements(Browser.getDriver(), LoginPage.class);
 
         Log.info("Logging as Admin");
-        HomePage homePage = loginPage.loginAs(PropertiesHolder.getUserName(), PropertiesHolder.getPassword());
+        BasePage basePage = loginPage.loginAs(PropertiesHolder.getAdminLoginName(), PropertiesHolder.getAdminPassword());
 
         Log.info("Verifying user is logged in");
-        Assert.assertTrue("Verifying user is logged in", homePage.isLoggedUserImageShown());
+        Assert.assertTrue("Verifying user is logged in", basePage.isUserLoggedIn(PropertiesHolder.getAdminUserName()));
     }
-
 }
