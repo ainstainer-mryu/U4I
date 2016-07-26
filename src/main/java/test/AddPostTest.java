@@ -1,8 +1,10 @@
+package test;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.support.PageFactory;
 import pages.HomePage;
 import pages.StreamPage;
+import test.AbstractAutoLoginTest;
 import utils.Browser;
 import utils.tools.Log;
 

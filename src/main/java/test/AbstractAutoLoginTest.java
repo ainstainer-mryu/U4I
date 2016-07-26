@@ -1,4 +1,7 @@
+package test;
+
 import org.junit.Before;
+import test.AbstractTest;
 import utils.helpers.Navigation;
 import utils.tools.Log;
 
