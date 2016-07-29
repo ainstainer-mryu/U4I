@@ -24,3 +24,6 @@ build/
 
 #binary files
 *.exe
+
+#property files
+*.properties
